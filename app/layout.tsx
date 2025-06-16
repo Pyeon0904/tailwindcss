@@ -1,8 +1,8 @@
 import React from "react";
 import type {Metadata} from "next";
 import "./globals.css";
-import {ThemeProvider} from 'next-themes';
-
+import ThemeToggle from "@/app/components/Toggle/ThemeToggle";
+import {ThemeProvider} from "next-themes";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -11,9 +11,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children}: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
     <body>
-    <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <ThemeToggle/>
       {children}
     </ThemeProvider>
     </body>

@@ -1,9 +1,10 @@
-export default function Home() {
+import React from 'react';
+import MainHeading from "@/app/components/layouts/MainHeading";
+
+export default function Page() {
   return (
     <>
-      <div className='text-3xl font-bold text-red-300'>
-        <p>Hello World!</p>
-      </div>
+      <MainHeading/>
     </>
   );
 }
